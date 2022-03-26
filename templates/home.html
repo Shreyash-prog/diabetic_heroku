@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <form method='post' action='/predict'>
+            <input type='text' name='Experience' placeholder='Exp' required="'required">
+            <input type='number' name='Phone_Number' placeholder='Mobile Number' required="'required">
+            <input type='email' name='Email' placeholder='MailID' required="'required">
+            <! form tag - This tag is used to create a form in the webpage.
+               input - This is used to create an input field in the form.
+               type - This is used to specify the type of the data that can be entered in the field.
+               name - This is used to specify the name of the variable in which we want the field input to be stored. (Check this with Asfan sir)
+               placeholder - This is used to help the user figure, what data must be entered in the field.
+               required - When this is set to 'required', then the field becomes required.>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
+<! Sending the data of a form (frontend) to the backend using POST method:
+   method='post'
+   action - The route assigned here will be followed by the frontend when the form is submitted.>
