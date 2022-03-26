@@ -71,12 +71,11 @@ def d_pred():
     model_db=joblib.load('diabetic_80.pkl')
     pred_db=model_db.predict([[preg,plas,pres,skin,test,mass,pedi,age]])
     if(pred_db[0]==0):
-        data='Person is not diabetic'
+        return 'Person is not diabetic'
     else:
-        data='Person is diabetic'
+        return 'Person is diabetic'
 
-    return render_template('db_predict.html',data=data)
-    #The variable 'data' is sent to the frontend by using the data parameter in the render_template function.
+   
 
 
 if __name__=='__main__':
