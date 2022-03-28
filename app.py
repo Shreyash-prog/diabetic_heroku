@@ -71,11 +71,11 @@ def d_pred():
     model_db=joblib.load('diabetic_80.pkl')
     pred_db=model_db.predict([[preg,plas,pres,skin,test,mass,pedi,age]])
     if(pred_db[0]==0):
-        return 'Person is not diabetic'
+        data = 'Person is not diabetic'
     else:
-        return 'Person is diabetic'
+        data = 'Person is diabetic'
 
-   
+    return render_template('db_predict.html',data=data)
 
 
 if __name__=='__main__':
